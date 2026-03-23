@@ -1,5 +1,6 @@
 package com.example.smartfinanceapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -15,11 +16,12 @@ class MainActivity : AppCompatActivity() {
         val btnHistory = findViewById<Button>(R.id.btnViewHistory)
 
         btnAdd.setOnClickListener {
-            Toast.makeText(this, "Add Transaction Clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, AddTransactionActivity::class.java)
+            startActivity(intent)
         }
 
         btnHistory.setOnClickListener {
-            Toast.makeText(this, "View History Clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "History screen will be added next", Toast.LENGTH_SHORT).show()
         }
     }
 }
