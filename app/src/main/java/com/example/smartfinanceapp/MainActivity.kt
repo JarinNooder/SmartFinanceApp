@@ -23,5 +23,9 @@ class MainActivity : AppCompatActivity() {
         btnHistory.setOnClickListener {
             Toast.makeText(this, "History screen will be added next", Toast.LENGTH_SHORT).show()
         }
+        btnHistory.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
